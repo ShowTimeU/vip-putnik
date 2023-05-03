@@ -9,24 +9,16 @@ export const CustomCursor: React.FC = () => {
     const onMouseMove = (e: MouseEvent) => {
       gsap.to(bigBallRef.current, {
         duration: 0.4,
-        x: e.pageX - 15,
-        y: e.pageY - 15,
+        x: e.pageX - 10,
+        y: e.pageY - 10,
       });
     };
 
     const onMouseHover = () => {
-      gsap.to(bigBallRef.current, {
-        duration: 0.3,
-        scale: 2,
-      });
       setIsHovered(true);
     };
 
     const onMouseHoverOut = () => {
-      gsap.to(bigBallRef.current, {
-        duration: 0.3,
-        scale: 1,
-      });
       setIsHovered(false);
     };
 
@@ -51,14 +43,13 @@ export const CustomCursor: React.FC = () => {
   return (
     <div className="fixed pointer-events-none z-50">
       <div ref={bigBallRef}>
-        <svg height="30" width="30">
+        <svg height="24" width="24">
           <circle
-            cx="15"
-            cy="15"
-            r="12"
+            cx="10"
+            cy="10"
+            r="10"
             strokeWidth="0"
-            fillOpacity={isHovered ? "0.4" : "1"}
-            fill="#FFD954"
+            fill={isHovered ? "#03B7F0" : "#FFD954"}
           ></circle>
         </svg>
       </div>
