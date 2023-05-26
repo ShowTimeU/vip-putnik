@@ -14,18 +14,20 @@ export const Header = () => {
         <link rel="icon" type="image/png" href="" />
       </Head>
 
-      <div className="w-screen h-[80px] bg-white border border-b border-vip-blue uppercase text-vip-blue fixed top-0 z-50">
+      <div className="w-screen h-[80px] bg-white border-b border-vip-blue uppercase text-vip-blue fixed top-0 z-50">
         <div className="w-full h-full max-w-[1440px] flex justify-between items-center px-6 mx-auto">
-          <div className="flex items-center space-x-5">
+          <div className="flex-1 w-1/3 flex items-center space-x-5">
             <a href="">Про нас</a>
             <a href="">Контакти</a>
           </div>
 
-          <a href="" className="font-bold text-xl">
-            Vipputnik
-          </a>
+          <div className="flex-1 w-1/3 text-center">
+            <a href="" className="font-bold text-xl">
+              Vipputnik
+            </a>
+          </div>
 
-          <div className="flex items-center space-x-5">
+          <div className="flex-1 w-1/3 flex justify-end items-center space-x-5">
             <a href="">Оплата послуг</a>
             <a
               href=""

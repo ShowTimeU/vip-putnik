@@ -11,7 +11,7 @@ export default function Home() {
           style={{
             background: `url('${
               require("@/components/assets/img/bg-desk.jpg").default.src
-            }') no-repeat center center / cover`,
+            }') no-repeat center top / cover`,
           }}
         >
           <h1 className="text-3xl w-2/5 leading-snug">
@@ -33,13 +33,13 @@ export default function Home() {
               Про нас
             </h1>
 
-            <div className="text-vip-blue pl-20 flex flex-col justify-center items-start space-y-10">
+            <div className="text-vip-blue pl-24 flex flex-col justify-center items-start space-y-10">
               <h1 className="font-semibold text-5xl leading-tight">
                 ВІП Путник - <br />
                 туристична компанія з 18-річним досвідом.
               </h1>
 
-              <p className="uppercase text-lg font-light leading-normal">
+              <p className="uppercase text-lg font-light leading-8">
                 Ми надаємо послуги
                 <span className="font-medium"> проживання</span> і
                 <span className="font-medium"> харчування</span>, складаємо
@@ -73,6 +73,15 @@ export default function Home() {
               className="absolute bottom-0 left-1/3"
               alt="Big banner"
             />
+          </div>
+        </div>
+        <div className="px-6 flex max-w-[1440px] mx-auto mb-24">
+          <div className="flex flex-col items-start space-y-10">
+            <h1 className="text-vip-blue uppercase text-xl font-semibold">
+              Тури улюбленці
+            </h1>
+
+            <div className="text-black">Slider</div>
           </div>
         </div>
       </div>
