@@ -41,7 +41,7 @@ export const CustomCursor: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed pointer-events-none z-50">
+    <div className="fixed pointer-events-none z-[51]">
       <div ref={bigBallRef}>
         <svg height="24" width="24">
           <circle

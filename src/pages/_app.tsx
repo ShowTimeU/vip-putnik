@@ -1,11 +1,10 @@
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
-import { CustomCursor } from "@/components/customCursor";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <CustomCursor />
+      {/*<CustomCursor />*/}
       <Component {...pageProps} />
     </>
   );
