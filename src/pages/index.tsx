@@ -7,17 +7,20 @@ export default function Home() {
       <div className="w-screen h-auto text-white overflow-hidden">
         <Header />
         <div
-          className="w-full min-h-[calc(100vh-80px)] relative pl-40 pt-32 -mt-2"
+          className="w-full min-h-[calc(100vh-80px)] relative pt-32 -mt-2"
           style={{
             background: `url('${
               require("@/components/assets/img/bg-desk.jpg").default.src
             }') no-repeat center top / cover`,
           }}
         >
-          <h1 className="text-3xl w-2/5 leading-snug">
-            Ми забезпечимо Вам <b>незабутні враження</b> та
-            <b> комфортний відпочинок</b>.
-          </h1>
+          <div className="max-w-[1440px] mx-auto px-6">
+            <h1 className="text-3xl leading-snug w-2/5">
+              Ми забезпечимо Вам <b>незабутні враження</b> та
+              <b> комфортний відпочинок</b>.
+            </h1>
+          </div>
+
           <div className="absolute w-full bottom-2 left-0 flex justify-center items-center text-center">
             <h2 className="uppercase text-xl font-bold">Пошук відпочинку</h2>
           </div>
