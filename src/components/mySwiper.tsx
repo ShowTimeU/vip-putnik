@@ -47,6 +47,11 @@ export const MySwiper = () => {
     },
   ];
 
+  const bindNavigationButtons = (swiper) => {
+    swiper.params.navigation.prevEl = navigationPrevRef.current;
+    swiper.params.navigation.nextEl = navigationNextRef.current;
+  };
+
   return (
     <>
       <Swiper
@@ -59,16 +64,7 @@ export const MySwiper = () => {
           prevEl: navigationPrevRef.current,
           nextEl: navigationNextRef.current,
         }}
-        onBeforeInit={(swiper) => {
-          if (typeof swiper.params.navigation === "object") {
-            if ("prevEl" in swiper.params.navigation) {
-              swiper.params.navigation.prevEl = navigationPrevRef.current;
-            }
-            if ("nextEl" in swiper.params.navigation) {
-              swiper.params.navigation.nextEl = navigationNextRef.current;
-            }
-          }
-        }}
+        onBeforeInit={bindNavigationButtons}
       >
         {slides.map((slide, index) => (
           <SwiperSlide
