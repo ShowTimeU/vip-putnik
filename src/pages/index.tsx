@@ -1,5 +1,6 @@
 import { ItTourWidget } from "@/components/itTourWidget";
 import { Header } from "@/components/main/header";
+import { MySwiper } from "@/components/mySwiper";
 
 export default function Home() {
   return (
@@ -26,11 +27,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-[1210px] mx-auto">
+        <div className="max-w-[1210px] mx-auto mb-24">
           <ItTourWidget />
         </div>
 
-        <div className="px-6 flex max-w-[1440px] mx-auto my-24">
+        <div className="px-6 flex max-w-[1440px] mx-auto mb-24">
           <div className="flex-1 flex flex-col items-start space-y-10">
             <h1 className="text-vip-blue uppercase text-xl font-semibold">
               Про нас
@@ -42,7 +43,7 @@ export default function Home() {
                 туристична компанія з 18-річним досвідом.
               </h1>
 
-              <p className="uppercase text-lg font-light leading-8">
+              <h2 className="uppercase text-lg font-light leading-8">
                 Ми надаємо послуги
                 <span className="font-medium"> проживання</span> і
                 <span className="font-medium"> харчування</span>, складаємо
@@ -52,7 +53,7 @@ export default function Home() {
                 надаємо <span className="font-medium">транспортні послуги</span>
                 , складаємо <span className="font-medium">водні маршрути </span>
                 та багато іншого.
-              </p>
+              </h2>
 
               <a
                 href=""
@@ -78,14 +79,72 @@ export default function Home() {
             />
           </div>
         </div>
+
         <div className="px-6 flex max-w-[1440px] mx-auto mb-24">
-          <div className="flex flex-col items-start space-y-10">
+          <div className="flex flex-col items-start space-y-10 w-full">
             <h1 className="text-vip-blue uppercase text-xl font-semibold">
               Тури улюбленці
             </h1>
 
-            <div className="text-black">Slider</div>
+            <div className="w-full relative">
+              <MySwiper />
+            </div>
           </div>
+        </div>
+
+        <div className="px-6 flex max-w-[1440px] mx-auto mb-24">
+          <div className="flex flex-col items-start space-y-10 w-full">
+            <h1 className="text-vip-blue uppercase text-xl font-semibold">
+              Чому ми?
+            </h1>
+
+            <div className="text-center text-vip-blue w-1/2 mx-auto">
+              <h2 className="uppercase text-3xl font-light leading-10">
+                Завдяки
+                <span className="font-medium"> широкому діапазону послуг </span>
+                ми успішно співпрацюємо як з великими партнерами в Україні, так
+                і з іноземними партнерами.{" "}
+                <span className="font-medium">Якість</span>,
+                <span className="font-medium"> стабільність</span> і
+                <span className="font-medium"> постійний рух уперед </span> -
+                запорука нашого успіху.
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div className="px-6 flex max-w-[1440px] mx-auto mb-24 bg-[#F9F9F9] py-12">
+          <div className="flex justify-between items-center w-full">
+            <div className="w-2/3 relative flex justify-end">
+              <img
+                src={
+                  require("@/components/assets/img/banner_3.png").default.src
+                }
+                className="absolute left-0 top-1/2 -translate-y-1/2"
+                alt="Small banner"
+              />
+              <img
+                src={
+                  require("@/components/assets/img/banner_4.png").default.src
+                }
+                alt="Big banner"
+              />
+            </div>
+            <div className="w-1/3 flex justify-center items-center text-vip-blue pl-20">
+              <h2 className="text-lg leading-8">
+                Ми знаходимо
+                <span className="font-semibold"> індивідуальний підхід </span>до
+                кожного клієнта, щоб знайти тур, який
+                <span className="font-semibold"> найкраще відповідає </span>його
+                <span className="font-semibold"> потребам </span>та
+                <span className="font-semibold"> бюджету</span>.
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div className="px-6 max-w-[1440px] mx-auto mb-24">
+          <div className="w-full flex justify-center items-center"></div>
         </div>
       </div>
     </>
