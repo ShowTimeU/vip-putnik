@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef } from "react";
+import React, { useRef } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -88,34 +88,20 @@ export const MySwiper = () => {
         ))}
       </Swiper>
       <div className="absolute bottom-0 w-full flex justify-end items-center z-10 space-x-10">
-        <CustomPrevButton ref={navigationPrevRef} />
-        <CustomNextButton ref={navigationNextRef} />
+        <button ref={navigationPrevRef}>
+          <img
+            src={require("@/components/assets/btn-arrow.svg").default.src}
+            className="rotate-180"
+            alt="Prev arrow"
+          />
+        </button>
+        <button ref={navigationNextRef}>
+          <img
+            src={require("@/components/assets/btn-arrow.svg").default.src}
+            alt="Next arrow"
+          />
+        </button>
       </div>
     </>
   );
 };
-
-export const CustomPrevButton = forwardRef<HTMLButtonElement, {}>(
-  (props, ref) => (
-    <button ref={ref}>
-      <img
-        src={require("@/components/assets/btn-arrow.svg").default.src}
-        className="rotate-180"
-        alt="Prev arrow"
-      />
-    </button>
-  )
-);
-CustomPrevButton.displayName = "CustomPrevButton";
-
-export const CustomNextButton = forwardRef<HTMLButtonElement, {}>(
-  (props, ref) => (
-    <button ref={ref}>
-      <img
-        src={require("@/components/assets/btn-arrow.svg").default.src}
-        alt="Next arrow"
-      />
-    </button>
-  )
-);
-CustomNextButton.displayName = "CustomNextButton";
