@@ -1,12 +1,11 @@
-import React, { useRef } from "react";
-import { Navigation } from "swiper";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 import "swiper/css";
-import "swiper/css/navigation";
 
 export const MySwiper = () => {
-  const navigationPrevRef = useRef(null);
-  const navigationNextRef = useRef(null);
+  const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
+  const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
 
   const slides = [
     {
@@ -47,11 +46,6 @@ export const MySwiper = () => {
     },
   ];
 
-  const bindNavigationButtons = (swiper: any) => {
-    swiper.params.navigation.prevEl = navigationPrevRef.current;
-    swiper.params.navigation.nextEl = navigationNextRef.current;
-  };
-
   return (
     <>
       <Swiper
@@ -60,11 +54,7 @@ export const MySwiper = () => {
         slidesPerView={3}
         loop
         className="!pb-12"
-        navigation={{
-          prevEl: navigationPrevRef.current,
-          nextEl: navigationNextRef.current,
-        }}
-        onBeforeInit={bindNavigationButtons}
+        navigation={{ prevEl, nextEl }}
       >
         {slides.map((slide, index) => (
           <SwiperSlide
@@ -84,19 +74,19 @@ export const MySwiper = () => {
         ))}
       </Swiper>
       <div className="absolute bottom-0 w-full flex justify-end items-center z-10 space-x-10">
-        <button ref={navigationPrevRef}>
+        <div ref={(node) => setPrevEl(node)} className="cursor-pointer">
           <img
             src={require("@/components/assets/btn-arrow.svg").default.src}
             className="rotate-180"
             alt="Prev arrow"
           />
-        </button>
-        <button ref={navigationNextRef}>
+        </div>
+        <div ref={(node) => setNextEl(node)} className="cursor-pointer">
           <img
             src={require("@/components/assets/btn-arrow.svg").default.src}
             alt="Next arrow"
           />
-        </button>
+        </div>
       </div>
     </>
   );
