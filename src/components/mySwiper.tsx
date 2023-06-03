@@ -47,7 +47,7 @@ export const MySwiper = () => {
     },
   ];
 
-  const bindNavigationButtons = (swiper) => {
+  const bindNavigationButtons = (swiper: any) => {
     swiper.params.navigation.prevEl = navigationPrevRef.current;
     swiper.params.navigation.nextEl = navigationNextRef.current;
   };
