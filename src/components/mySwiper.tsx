@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, EffectCoverflow } from "swiper";
 import "swiper/css";
+import "swiper/css/effect-coverflow";
 
 export const MySwiper = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
@@ -49,10 +50,15 @@ export const MySwiper = () => {
   return (
     <>
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, EffectCoverflow]}
         spaceBetween={20}
         slidesPerView={3}
         loop
+        effect={"coverflow"}
+        coverflowEffect={{
+          rotate: 30,
+          slideShadows: false,
+        }}
         className="!pb-12"
         navigation={{ prevEl, nextEl }}
       >
