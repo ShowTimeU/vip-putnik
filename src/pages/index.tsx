@@ -1,6 +1,6 @@
 import { ItTourWidget } from "@/components/itTourWidget";
 import { Header } from "@/components/main/header";
-import { MySwiper } from "@/components/mySwiper";
+import dynamic from "next/dynamic";
 import { MyForm } from "@/components/myForm";
 import { Button } from "@/components/main/button";
 import { Footer } from "@/components/main/footer";
@@ -9,6 +9,10 @@ import {
   ParallaxBanner,
   ParallaxProvider,
 } from "react-scroll-parallax";
+
+const MySwiper = dynamic(() =>
+  import("@/components/mySwiper").then((mod) => mod.MySwiper)
+);
 
 export default function Home() {
   return (
@@ -42,10 +46,7 @@ export default function Home() {
             <div id="about" />
           </div>
 
-          <Parallax
-            speed={10}
-            className="px-6 flex max-w-[1440px] mx-auto mb-24"
-          >
+          <div className="px-6 flex max-w-[1440px] mx-auto mb-24">
             <div className="flex-1 flex flex-col items-start space-y-10">
               <h1 className="uppercase text-xl font-semibold">Про нас</h1>
 
@@ -71,7 +72,10 @@ export default function Home() {
                 <Button btnType="link">Зв&apos;язатись з нами</Button>
               </div>
             </div>
-            <div className="flex-1 flex justify-end items-start relative">
+            <Parallax
+              speed={8}
+              className="flex-1 flex justify-end items-start relative"
+            >
               <img
                 src={
                   require("@/components/assets/img/banner_1.png").default.src
@@ -85,8 +89,8 @@ export default function Home() {
                 className="absolute bottom-0 left-1/3"
                 alt="Big banner"
               />
-            </div>
-          </Parallax>
+            </Parallax>
+          </div>
 
           <div className="px-6 flex max-w-[1440px] mx-auto mb-24">
             <div className="flex flex-col items-start space-y-10 w-full">
@@ -100,10 +104,7 @@ export default function Home() {
             </div>
           </div>
 
-          <Parallax
-            speed={10}
-            className="px-6 flex max-w-[1440px] mx-auto mb-24"
-          >
+          <div className="px-6 flex max-w-[1440px] mx-auto mb-24">
             <div className="flex flex-col items-start space-y-10 w-full">
               <h1 className="uppercase text-xl font-semibold">Чому ми?</h1>
 
@@ -123,18 +124,18 @@ export default function Home() {
                 </h2>
               </div>
             </div>
-          </Parallax>
+          </div>
 
           <div className="w-full bg-[#F9F9F9] mb-24">
             <div className="px-6 flex max-w-[1440px] mx-auto py-12">
               <div className="flex justify-between items-center w-full">
-                <div className="w-2/3 relative flex justify-end">
+                <Parallax speed={6} className="w-2/3 relative flex justify-end">
                   <ParallaxBanner
                     layers={[
                       {
                         image: require("@/components/assets/img/banner_3.png")
                           .default.src,
-                        speed: 10,
+                        speed: 5,
                       },
                     ]}
                     className="!absolute left-0 top-1/2 -translate-y-1/2 aspect-video max-w-[400px] z-10"
@@ -144,13 +145,16 @@ export default function Home() {
                       {
                         image: require("@/components/assets/img/banner_4.png")
                           .default.src,
-                        speed: 10,
+                        speed: 5,
                       },
                     ]}
                     className="aspect-square max-w-[700px]"
                   />
-                </div>
-                <div className="w-1/3 flex justify-center items-center pl-20 pr-10">
+                </Parallax>
+                <Parallax
+                  speed={-6}
+                  className="w-1/3 flex justify-center items-center pl-20 pr-10"
+                >
                   <h2 className="text-lg leading-7">
                     Ми знаходимо
                     <span className="font-semibold">
@@ -163,15 +167,12 @@ export default function Home() {
                     <span className="font-semibold"> потребам </span>та
                     <span className="font-semibold"> бюджету</span>.
                   </h2>
-                </div>
+                </Parallax>
               </div>
             </div>
           </div>
 
-          <Parallax
-            speed={10}
-            className="px-6 max-w-[1440px] mx-auto mb-36 text-lg font-semibold"
-          >
+          <div className="px-6 max-w-[1440px] mx-auto mb-36 text-lg font-semibold">
             <div className="w-full flex justify-center items-center space-x-40">
               <div className="flex justify-center items-center space-x-4">
                 <i className="fal fa-shield-check fa-3x" />
@@ -194,12 +195,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </Parallax>
+            <div id="contacts" />
+          </div>
 
-          <Parallax
-            speed={10}
-            className="px-6 flex max-w-[1440px] mx-auto mb-24"
-          >
+          <div className="px-6 flex max-w-[1440px] mx-auto mb-24">
             <div className="flex flex-col items-start space-y-10 w-full">
               <h1 className="uppercase text-xl font-semibold">
                 Напишіть нам повідомлення
@@ -224,9 +223,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </Parallax>
+          </div>
 
-          <div id="contacts" />
           <Footer />
         </div>
       </ParallaxProvider>
