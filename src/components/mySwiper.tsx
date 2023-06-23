@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import $ from "jquery";
-import { gsap } from "gsap/dist/gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export const MySwiper = () => {

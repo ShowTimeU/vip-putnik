@@ -9,6 +9,7 @@ import {
   ParallaxBanner,
   ParallaxProvider,
 } from "react-scroll-parallax";
+import React from "react";
 
 const MySwiper = dynamic(() =>
   import("@/components/mySwiper").then((mod) => mod.MySwiper)
