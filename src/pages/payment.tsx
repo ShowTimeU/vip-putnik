@@ -11,7 +11,7 @@ export default function Payment() {
           className="lozad"
           src="https://pay.pinbank.ua/widget-ext/payment/service/3197?lang=uk&iframePartnerCode=putnik-frame&template=false"
           width="900"
-          height="480"
+          height="500"
           scrolling="no"
           frameBorder="no"
         ></iframe>
