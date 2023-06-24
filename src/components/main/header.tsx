@@ -43,7 +43,7 @@ export const Header = () => {
           </div>
 
           <div className="flex-1 w-1/3 flex justify-end items-center space-x-5">
-            <a href="https://vipputnik.com.ua//payment">Оплата послуг</a>
+            <a href="https://vipputnik.com.ua/payment">Оплата послуг</a>
             <Link
               to="search"
               smooth={true}
