@@ -11,9 +11,11 @@ export const Footer = () => {
           </div>
 
           <div className="flex justify-start items-center space-x-14 text-vip-light-blue underline">
-            <a href="">Instagram</a>
-            <a href="">Facebook</a>
-            <a href="">LinkedIn</a>
+            <a href="https://www.instagram.com/vip.putnik/">Instagram</a>
+            <a href="https://www.facebook.com/Viputnik">Facebook</a>
+            <a href="https://www.linkedin.com/in/gelena-yankovich-52702549/">
+              LinkedIn
+            </a>
           </div>
         </div>
         <div className="w-1/2 pl-10 flex justify-start">
