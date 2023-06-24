@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <div className="max-w-[1200px] mx-auto pb-24">
+    <div className="max-w-[1200px] mx-auto pb-24 px-6 lg:px-0">
       <div className="w-full flex justify-center items-end">
         <div className="w-1/2 flex flex-col justify-center items-start space-y-10 text-xl">
           <div className="font-semibold">
