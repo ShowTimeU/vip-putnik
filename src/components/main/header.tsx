@@ -37,13 +37,13 @@ export const Header = () => {
           </div>
 
           <div className="flex-1 w-1/3 text-center">
-            <a href="https://vipputnik.com.ua" className="font-bold text-xl">
+            <a href="https://vipputnik.com.ua/" className="font-bold text-xl">
               Vipputnik
             </a>
           </div>
 
           <div className="flex-1 w-1/3 flex justify-end items-center space-x-5">
-            <a href="">Оплата послуг</a>
+            <a href="https://vipputnik.com.ua//payment">Оплата послуг</a>
             <Link
               to="search"
               smooth={true}
