@@ -1,6 +1,10 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 export const Footer = () => {
+  const { asPath } = useRouter();
+  const paymentPage = asPath === "/payment";
+
   return (
     <div className="max-w-[1200px] mx-auto pb-12 lg:pb-24 px-6 lg:px-0 border lg:border-0 border-t border-t-vip-blue pt-5 lg:pt-0">
       <div className="w-full flex flex-col-reverse lg:flex-row justify-center items-end">
@@ -18,23 +22,26 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:pl-10 flex justify-center lg:justify-start mb-12 lg:mb-0">
-          <a
-            href="https://vipputnik.com.ua/payment"
-            className="text-white bg-vip-blue flex justify-center items-center rounded-lg py-2.5 px-5 uppercase my-button"
-          >
-            <span className="flex justify-center items-center gap-3">
-              Оплата послуг
-              <img
-                src={
-                  require("@/components/assets/btn-arrow-white.svg").default.src
-                }
-                width={40}
-                alt="Arrow img"
-              />
-            </span>
-          </a>
-        </div>
+        {!paymentPage && (
+          <div className="w-full lg:w-1/2 lg:pl-10 flex justify-center lg:justify-start mb-12 lg:mb-0">
+            <a
+              href="https://vipputnik.com.ua/payment"
+              className="text-white bg-vip-blue flex justify-center items-center rounded-lg py-2.5 px-5 uppercase my-button"
+            >
+              <span className="flex justify-center items-center gap-3">
+                Оплата послуг
+                <img
+                  src={
+                    require("@/components/assets/btn-arrow-white.svg").default
+                      .src
+                  }
+                  width={40}
+                  alt="Arrow img"
+                />
+              </span>
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

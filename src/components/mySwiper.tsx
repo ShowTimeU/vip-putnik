@@ -4,6 +4,11 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper";
+import "swiper/css";
+import "swiper/css/free-mode";
+
 export const MySwiper = () => {
   const slides = [
     {
@@ -158,7 +163,7 @@ export const MySwiper = () => {
   return (
     <>
       <div
-        className="img_tray w-full"
+        className="img_tray w-full hidden lg:block"
         style={{
           translate: "none",
           rotate: "none",
@@ -187,6 +192,35 @@ export const MySwiper = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="block lg:hidden">
+        <Swiper
+          modules={[FreeMode]}
+          spaceBetween={15}
+          slidesPerView="auto"
+          loop
+          freeMode
+          className="!pb-12"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex flex-col justify-center items-start space-y-1.5 !w-[260px] !h-[350px]"
+            >
+              <div
+                className="w-full h-full"
+                style={{
+                  background: `url('${slide.img}') no-repeat center center / cover`,
+                }}
+              />
+              <div className="text-sm text-vip-blue">
+                <span className="uppercase">{slide.title}</span>,{" "}
+                {slide.subtitle}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </>
   );

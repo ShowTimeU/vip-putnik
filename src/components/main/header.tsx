@@ -101,9 +101,9 @@ export const Header = () => {
           </div>
         </div>
         <div
-          className="w-full bg-white px-2.5 pb-4 flex flex-col justify-center items-center space-y-2 transition-transform duration-700 ease-in-out overflow-hidden"
+          className="w-full bg-white px-2.5 pt-16 pb-20 flex flex-col justify-center items-center space-y-6 transition-transform duration-700 ease-in-out overflow-hidden"
           style={{
-            transform: isOpen ? "translateY(0)" : "translateY(-150%)",
+            transform: isOpen ? "translateX(0)" : "translateX(-100%)",
           }}
         >
           <a onClick={() => navigateAndScroll("#about")}>Про нас</a>
