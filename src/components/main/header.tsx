@@ -100,19 +100,22 @@ export const Header = () => {
             </div>
           </div>
         </div>
-        {isOpen && (
-          <div className="w-full bg-white px-2.5 pb-2.5 flex flex-col justify-center items-center space-y-2">
-            <a onClick={() => navigateAndScroll("#about")}>Про нас</a>
-            <a onClick={() => navigateAndScroll("#contacts")}>Контакти</a>
-            <a href="https://vipputnik.com.ua/payment">Оплата послуг</a>
-            <a
-              onClick={() => navigateAndScroll("#search")}
-              className="py-2.5 px-5 rounded-full bg-vip-light-blue text-white"
-            >
-              Пошук туру
-            </a>
-          </div>
-        )}
+        <div
+          className="w-full bg-white px-2.5 pb-4 flex flex-col justify-center items-center space-y-2 transition-transform duration-700 ease-in-out overflow-hidden"
+          style={{
+            transform: isOpen ? "translateY(0)" : "translateY(-150%)",
+          }}
+        >
+          <a onClick={() => navigateAndScroll("#about")}>Про нас</a>
+          <a onClick={() => navigateAndScroll("#contacts")}>Контакти</a>
+          <a href="https://vipputnik.com.ua/payment">Оплата послуг</a>
+          <a
+            onClick={() => navigateAndScroll("#search")}
+            className="py-2.5 px-5 rounded-full bg-vip-light-blue text-white"
+          >
+            Пошук туру
+          </a>
+        </div>
       </div>
     </>
   );

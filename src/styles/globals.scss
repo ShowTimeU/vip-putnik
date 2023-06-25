@@ -52,9 +52,9 @@ html {
 }
 
 .menu.open span:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
+  transform: translateY(4.5px) rotate(20deg);
 }
 
 .menu.open span:nth-child(2) {
-  transform: translateY(-5px) rotate(-45deg);
+  transform: translateY(-4.5px) rotate(-20deg);
 }

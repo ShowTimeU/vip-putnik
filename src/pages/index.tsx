@@ -18,7 +18,7 @@ export default function Home() {
         <div className="w-screen h-auto overflow-hidden text-vip-blue">
           <Header />
           <div
-            className="w-full min-h-[calc(100vh-50px)] lg:min-h-[calc(100vh-65px)] relative pt-24 lg:pt-32 -mt-2 text-white"
+            className="w-full min-h-[calc(88vh-50px)] lg:min-h-[calc(100vh-65px)] relative pt-24 lg:pt-32 -mt-2 text-white"
             style={{
               background: `url('${
                 require("@/components/assets/img/bg-desk.jpg").default.src
@@ -26,7 +26,7 @@ export default function Home() {
             }}
           >
             <div className="max-w-[1440px] mx-auto px-2.5">
-              <h1 className="text-xl lg:text-3xl leading-snug w-full lg:w-2/5">
+              <h1 className="text-xl lg:text-3xl leading-snug w-3/5 lg:w-2/5">
                 Ми забезпечимо Вам <b>незабутні враження</b> та
                 <b> комфортний відпочинок</b>.
               </h1>
@@ -76,7 +76,7 @@ export default function Home() {
               </div>
             </div>
             <Parallax
-              speed={8}
+              speed={10}
               className="flex-1 flex justify-end items-start relative mt-12 lg:mt-0"
             >
               <img
