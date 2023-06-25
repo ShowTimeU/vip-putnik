@@ -173,14 +173,16 @@ export const MySwiper = () => {
           {slides.map((slide, idx) => (
             <div key={idx + 1} className="tray_col px-3">
               <div
-                className="w-[390px] h-[520px]"
+                className="w-[260px] h-[350px] lg:w-[390px] lg:h-[520px]"
                 style={{
                   background: `url('${slide.img}') no-repeat center center / cover`,
                 }}
               />
               <div className="text-vip-blue">
-                <span className="uppercase">{slide.title}</span>,{" "}
-                {slide.subtitle}
+                <span className="uppercase text-sm lg:text-base">
+                  {slide.title}
+                </span>
+                , {slide.subtitle}
               </div>
             </div>
           ))}

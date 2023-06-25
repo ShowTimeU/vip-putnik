@@ -49,7 +49,7 @@ export const MyForm = () => {
             placeholder="Ваше ім’я*"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full border-b border-vip-input p-2 rounded placeholder:text-vip-input focus:outline-none focus:border-b-vip-blue"
+            className="text-sm lg:text-base w-full border-b border-vip-input p-2 rounded placeholder:text-vip-input focus:outline-none focus:border-b-vip-blue"
             required
           />
 
@@ -59,7 +59,7 @@ export const MyForm = () => {
             placeholder="Поштова скринька*"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border-b border-vip-input p-2 rounded placeholder:text-vip-input focus:outline-none focus:border-b-vip-blue"
+            className="text-sm lg:text-base w-full border-b border-vip-input p-2 rounded placeholder:text-vip-input focus:outline-none focus:border-b-vip-blue"
             required
           />
 
@@ -68,7 +68,7 @@ export const MyForm = () => {
             placeholder="Повідомлення*"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full border-b border-vip-input p-2 rounded placeholder:text-vip-input focus:outline-none focus:border-b-vip-blue !h-40 resize-none"
+            className="text-sm lg:text-base w-full border-b border-vip-input p-2 rounded placeholder:text-vip-input focus:outline-none focus:border-b-vip-blue !h-40 resize-none"
             required
           />
 

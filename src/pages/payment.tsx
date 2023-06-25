@@ -6,7 +6,7 @@ export default function Payment() {
   return (
     <>
       <Header />
-      <div className="w-full mt-[65px] py-14 flex justify-center items-center px-6">
+      <div className="w-full mt-[65px] py-8 lg:py-14 flex justify-center items-center px-2.5">
         <iframe
           className="lozad"
           src="https://pay.pinbank.ua/widget-ext/payment/service/3197?lang=uk&iframePartnerCode=putnik-frame&template=false"

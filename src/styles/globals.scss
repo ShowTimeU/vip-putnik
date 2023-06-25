@@ -50,3 +50,11 @@ html {
 .my-button:hover span {
   animation: fade .7s;
 }
+
+.menu.open span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.menu.open span:nth-child(2) {
+  transform: translateY(-5px) rotate(-45deg);
+}
