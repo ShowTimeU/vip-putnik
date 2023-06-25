@@ -37,7 +37,7 @@ export default function Home() {
                 Пошук відпочинку
               </h2>
             </div>
-            <div id="search" className="mt-44 lg:mt-10" />
+            <div id="search" />
           </div>
 
           <div className="max-w-[1210px] mx-auto mb-12 lg:mb-24">
@@ -203,13 +203,13 @@ export default function Home() {
           </div>
 
           <div className="px-2.5 flex max-w-[1440px] mx-auto mb-24">
-            <div className="flex flex-col items-start space-y-5 lg:space-y-10 w-full">
-              <h1 className="uppercase text-sm lg:text-xl font-semibold">
+            <div className="flex flex-col items-start space-y-0 lg:space-y-10 w-full">
+              <h1 className="uppercase text-sm lg:text-xl font-semibold hidden lg:block">
                 Напишіть нам повідомлення
               </h1>
 
               <div className="w-full max-w-[1200px] mx-auto flex flex-col-reverse lg:flex-row justify-center items-center">
-                <div className="w-full lg:w-1/2 mt-5 lg:mt-0">
+                <div className="w-1/2 mt-5 hidden lg:block">
                   <MyForm />
                 </div>
                 <div className="w-10/12 lg:w-1/2 lg:pl-10 text-center lg:text-left">
